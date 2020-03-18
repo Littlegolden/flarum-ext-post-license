@@ -3,8 +3,8 @@ import SettingsModal from 'flarum/components/SettingsModal';
 import Switch from 'flarum/components/Switch';
 import licenses from '../../common/licenses';
 
-const settingsPrefix = 'littlegolden-post-license.';
-const translationPrefix = 'littlegolden-post-license.admin.settings.';
+const settingsPrefix = 'clarkwinkelmann-post-license.';
+const translationPrefix = 'clarkwinkelmann-post-license.admin.settings.';
 
 export default class LicenseSettingsModal extends SettingsModal {
     init() {
@@ -52,7 +52,7 @@ export default class LicenseSettingsModal extends SettingsModal {
                     placeholder: app.translator.trans(translationPrefix + 'field.filter-licenses'),
                 }),
             ]),
-            m('.LittleGolden__Post__Licenses', licenses.licenses.map(license => {
+            m('.ClarkWinkelmann__Post__Licenses', licenses.licenses.map(license => {
                 if (filterValue && license.name.toLowerCase().indexOf(filterValue) === -1 && license.licenseId.toLowerCase().indexOf(filterValue) === -1) {
                     return null;
                 }

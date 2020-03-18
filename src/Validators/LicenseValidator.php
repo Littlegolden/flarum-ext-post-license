@@ -1,6 +1,6 @@
 <?php
 
-namespace LittleGolden\PostLicense\Validators;
+namespace ClarkWinkelmann\PostLicense\Validators;
 
 use Flarum\Foundation\AbstractValidator;
 use Flarum\Settings\SettingsRepositoryInterface;
@@ -19,14 +19,14 @@ class LicenseValidator extends AbstractValidator
          */
         $settings = app(SettingsRepositoryInterface::class);
 
-        if ($settings->get('littlegolden-post-license.require-license')) {
+        if ($settings->get('clarkwinkelmann-post-license.require-license')) {
             $rules[] = 'required';
         } else {
             $rules[] = 'nullable';
         }
 
-        if (!$settings->get('littlegolden-post-license.allow-custom-license')) {
-            $rules[] = Rule::in(json_decode($settings->get('littlegolden-post-license.enabled-licenses', '[]')));
+        if (!$settings->get('clarkwinkelmann-post-license.allow-custom-license')) {
+            $rules[] = Rule::in(json_decode($settings->get('clarkwinkelmann-post-license.enabled-licenses', '[]')));
         }
 
         return [

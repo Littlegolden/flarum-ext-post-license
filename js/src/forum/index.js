@@ -8,36 +8,36 @@ import EditPostComposer from 'flarum/components/EditPostComposer';
 import LicenseMeta from './components/LicenseMeta';
 
 function addLicenseField(ComposerComponent) {
-    ComposerComponent.prototype.littleGoldenPostLicense = null;
+    ComposerComponent.prototype.clarkWinkelmannPostLicense = null;
 
     extend(ComposerComponent.prototype, 'headerItems', function (items) {
-        items.add('littlegolden-post-license', LicensePicker.component({
-            license: this.littleGoldenPostLicense,
+        items.add('clarkwinkelmann-post-license', LicensePicker.component({
+            license: this.clarkWinkelmannPostLicense,
             onchange: license => {
-                this.littleGoldenPostLicense = license;
+                this.clarkWinkelmannPostLicense = license;
             },
         }));
     });
 
     extend(ComposerComponent.prototype, 'data', function (data) {
-        data.littleGoldenPostLicense = this.littleGoldenPostLicense;
+        data.clarkWinkelmannPostLicense = this.clarkWinkelmannPostLicense;
     });
 }
 
-app.initializers.add('littlegolden/post-license', () => {
+app.initializers.add('clarkwinkelmann/post-license', () => {
     addLicenseField(ReplyComposer);
     addLicenseField(EditPostComposer);
     addLicenseField(DiscussionComposer);
 
     extend(EditPostComposer.prototype, 'init', function () {
-        this.littleGoldenPostLicense = this.props.post.attribute('littleGoldenPostLicense');
+        this.clarkWinkelmannPostLicense = this.props.post.attribute('clarkWinkelmannPostLicense');
     });
 
     extend(CommentPost.prototype, 'headerItems', function (items) {
-        const license = this.props.post.attribute('littleGoldenPostLicense');
+        const license = this.props.post.attribute('clarkWinkelmannPostLicense');
 
         if (license) {
-            items.add('littlegolden-post-license', LicenseMeta.component({
+            items.add('clarkwinkelmann-post-license', LicenseMeta.component({
                 license,
             }));
         }

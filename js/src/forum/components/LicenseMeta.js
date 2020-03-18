@@ -18,10 +18,10 @@ export default class LicenseMeta extends Component {
 
     shortName() {
         if (!this.license) {
-            return app.translator.trans('littlegolden-post-license.forum.license-meta.custom');
+            return app.translator.trans('clarkwinkelmann-post-license.forum.license-meta.custom');
         }
 
-        return app.translator.trans('littlegolden-post-license.forum.license-meta.label', {
+        return app.translator.trans('clarkwinkelmann-post-license.forum.license-meta.label', {
             license: this.license.licenseId,
         });
     }
@@ -29,7 +29,7 @@ export default class LicenseMeta extends Component {
     details() {
         if (!this.license) {
             return [
-                m('p', m('em', app.translator.trans('littlegolden-post-license.forum.license-meta.custom-explanation'))),
+                m('p', m('em', app.translator.trans('clarkwinkelmann-post-license.forum.license-meta.custom-explanation'))),
                 m('p', this.props.license),
             ];
         }
@@ -40,7 +40,7 @@ export default class LicenseMeta extends Component {
                 href,
                 rel: 'nofollow',
                 target: '_blank',
-            }, app.translator.trans('littlegolden-post-license.forum.license-meta.more'))),
+            }, app.translator.trans('clarkwinkelmann-post-license.forum.license-meta.more'))),
         ];
     }
 }

@@ -143,8 +143,8 @@ var _common_licenses__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__web
 
 
 
-var settingsPrefix = 'littlegolden-post-license.';
-var translationPrefix = 'littlegolden-post-license.admin.settings.';
+var settingsPrefix = 'clarkwinkelmann-post-license.';
+var translationPrefix = 'clarkwinkelmann-post-license.admin.settings.';
 
 var LicenseSettingsModal =
 /*#__PURE__*/
@@ -192,7 +192,7 @@ function (_SettingsModal) {
     }))]), m('h3', flarum_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans(translationPrefix + 'field.enabled-licenses')), m('.Form-group', [m('input[type=text].FormControl', {
       bidi: this.filter,
       placeholder: flarum_app__WEBPACK_IMPORTED_MODULE_1___default.a.translator.trans(translationPrefix + 'field.filter-licenses')
-    })]), m('.LittleGolden__Post__Licenses', _common_licenses__WEBPACK_IMPORTED_MODULE_4__.licenses.map(function (license) {
+    })]), m('.ClarkWinkelmann__Post__Licenses', _common_licenses__WEBPACK_IMPORTED_MODULE_4__.licenses.map(function (license) {
       if (filterValue && license.name.toLowerCase().indexOf(filterValue) === -1 && license.licenseId.toLowerCase().indexOf(filterValue) === -1) {
         return null;
       }
@@ -235,8 +235,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_LicenseSettingsModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/LicenseSettingsModal */ "./src/admin/components/LicenseSettingsModal.js");
 
 
-flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.initializers.add('littlegolden/post-license', function () {
-  flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.extensionSettings['littlegolden-post-license'] = function () {
+flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.initializers.add('clarkwinkelmann/post-license', function () {
+  flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.extensionSettings['clarkwinkelmann-post-license'] = function () {
     return flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.modal.show(new _components_LicenseSettingsModal__WEBPACK_IMPORTED_MODULE_1__["default"]());
   };
 });

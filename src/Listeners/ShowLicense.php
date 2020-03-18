@@ -1,6 +1,6 @@
 <?php
 
-namespace LittleGolden\PostLicense\Listeners;
+namespace ClarkWinkelmann\PostLicense\Listeners;
 
 use Flarum\Api\Event\Serializing;
 use Flarum\Api\Serializer\PostSerializer;
@@ -16,7 +16,7 @@ class ShowLicense
     public function serializing(Serializing $event)
     {
         if ($event->serializer instanceof PostSerializer) {
-            $event->attributes['littleGoldenPostLicense'] = $event->model->littlegolden_post_license;
+            $event->attributes['clarkWinkelmannPostLicense'] = $event->model->clarkwinkelmann_post_license;
         }
     }
 }

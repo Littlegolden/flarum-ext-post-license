@@ -1,6 +1,6 @@
 <?php
 
-namespace LittleGolden\PostLicense;
+namespace ClarkWinkelmann\PostLicense;
 
 use Flarum\Extend;
 use Illuminate\Contracts\Events\Dispatcher;

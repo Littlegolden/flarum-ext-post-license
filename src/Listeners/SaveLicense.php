@@ -1,8 +1,8 @@
 <?php
 
-namespace LittleGolden\PostLicense\Listeners;
+namespace ClarkWinkelmann\PostLicense\Listeners;
 
-use LittleGolden\PostLicense\Validators\LicenseValidator;
+use ClarkWinkelmann\PostLicense\Validators\LicenseValidator;
 use Flarum\Post\Event\Saving;
 use Illuminate\Contracts\Events\Dispatcher;
 
@@ -20,12 +20,12 @@ class SaveLicense
          */
         $validator = app(LicenseValidator::class);
 
-        $license = array_get($event->data, 'attributes.littleGoldenPostLicense');
+        $license = array_get($event->data, 'attributes.clarkWinkelmannPostLicense');
 
         $validator->assertValid([
             'license' => $license,
         ]);
 
-        $event->post->littlegolden_post_license = $license;
+        $event->post->clarkwinkelmann_post_license = $license;
     }
 }
