@@ -18,7 +18,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "ClarkWinkelmann\\PostLicense\\": "src/"
+            "LittleGolden\\PostLicense\\": "src/"
         }
     },
     "extra": {

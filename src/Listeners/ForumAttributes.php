@@ -1,6 +1,6 @@
 <?php
 
-namespace ClarkWinkelmann\PostLicense\Listeners;
+namespace LittleGolden\PostLicense\Listeners;
 
 use Flarum\Api\Event\Serializing;
 use Flarum\Api\Serializer\ForumSerializer;
@@ -22,9 +22,9 @@ class ForumAttributes
              */
             $settings = app(SettingsRepositoryInterface::class);
 
-            $event->attributes['clarkwinkelmann-post-license.require-license'] = (bool)$settings->get('clarkwinkelmann-post-license.require-license');
-            $event->attributes['clarkwinkelmann-post-license.allow-custom-license'] = (bool)$settings->get('clarkwinkelmann-post-license.allow-custom-license');
-            $event->attributes['clarkwinkelmann-post-license.enabled-licenses'] = json_decode($settings->get('clarkwinkelmann-post-license.enabled-licenses', '[]'));
+            $event->attributes['littlegolden-post-license.require-license'] = (bool)$settings->get('littlegolden-post-license.require-license');
+            $event->attributes['littlegolden-post-license.allow-custom-license'] = (bool)$settings->get('littlegolden-post-license.allow-custom-license');
+            $event->attributes['littlegolden-post-license.enabled-licenses'] = json_decode($settings->get('littlegolden-post-license.enabled-licenses', '[]'));
         }
     }
 }
