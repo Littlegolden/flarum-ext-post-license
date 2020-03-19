@@ -1,0 +1,21 @@
+littlegolden-post-license:
+    admin:
+        settings:
+            title: 許可證設置
+            field:
+                require-license: 強制要求用戶選擇許可證
+                allow-custom-license: 允許自定義許可證
+                enabled-licenses: 啟用許可證
+                filter-licenses: 關鍵詞過濾
+
+    forum:
+        license-meta:
+            label: "{license} 許可"
+            custom: 自定義許可證
+            custom-explanation: 該用戶使用以下自定義學科正
+            more: 詳情
+        license-picker:
+            label: 文章許可證
+            select: 選擇許可證
+            default: 默認許可證
+            custom: 自定義許可證
